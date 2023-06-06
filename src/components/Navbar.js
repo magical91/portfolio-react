@@ -36,22 +36,22 @@ const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Link
+                        <Nav.Link
                             to="/"
                             href="/"
                             className={activeLink === 'banner' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('banner')}>
                             Home
-                        </Link>
-                        <Nav.Link
+                        </Nav.Link>
+                        <Link
                             to="/about"
                             href="/about"
                             className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('about')}>
                             About
-                        </Nav.Link>
+                        </Link>
                         <Nav.Link
-                            to="/projects"
+                            // to="/projects"
                             href="/projects"
                             className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('projects')}>
