@@ -45,21 +45,21 @@ const NavBar = () => {
                         </Nav.Link>
                         <Nav.Link
                             to="/about"
-                            href="about"
+                            href="/about"
                             className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('about')}>
                             About
                         </Nav.Link>
                         <Nav.Link
                             to="/projects"
-                            href="projects"
+                            href="/projects"
                             className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('projects')}>
                             Projects
                         </Nav.Link>
                         <Nav.Link
                             to="/contact"
-                            href="contact"
+                            href="/contact"
                             className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('contact')}> 
                             Contact
