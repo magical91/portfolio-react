@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar } from "react-bootstrap"
+import { Container, Nav, Navbar, NavItem, NavLink } from "react-bootstrap"
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.svg"
@@ -36,34 +36,34 @@ const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link
+                        <NavLink
                             to="/"
                             href="/"
                             className={activeLink === 'banner' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('banner')}>
                             Home
-                        </Nav.Link>
-                        <Link
+                        </NavLink>
+                        <NavLink
                             to="/about"
                             href="/about"
                             className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('about')}>
                             About
-                        </Link>
-                        <Nav.Link
-                            // to="/projects"
+                        </NavLink>
+                        <NavLink
+                            to="/projects"
                             href="/projects"
                             className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('projects')}>
                             Projects
-                        </Nav.Link>
-                        <Nav.Link
+                        </NavLink>
+                        <NavLink
                             to="/contact"
                             href="/contact"
                             className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('contact')}> 
                             Contact
-                        </Nav.Link>
+                        </NavLink>
                     </Nav>
                     {/* <span className="navbar-text">
                         <div className="social-icon">
