@@ -1,6 +1,6 @@
 import { Container, Nav, Navbar } from "react-bootstrap"
 import React, { useEffect, useState } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.svg"
 import navIcon1 from "../assets/img/nav-icon1.svg";
 import navIcon2 from "../assets/img/githubIcon.png";
@@ -36,13 +36,13 @@ const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link
+                        <Link
                             to="/"
                             href="/"
                             className={activeLink === 'banner' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('banner')}>
                             Home
-                        </Nav.Link>
+                        </Link>
                         <Nav.Link
                             to="/about"
                             href="/about"
