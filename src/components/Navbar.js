@@ -1,9 +1,9 @@
-import { Container, Nav, Navbar, NavItem, NavLink } from "react-bootstrap"
+import { Container, Nav, Navbar } from "react-bootstrap"
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/logo.svg"
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/githubIcon.png";
+// import navIcon1 from "../assets/img/nav-icon1.svg";
+// import navIcon2 from "../assets/img/githubIcon.png";
 
 const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
@@ -36,34 +36,39 @@ const NavBar = () => {
                 </Navbar.Toggle>
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <NavLink
+                        <Nav.Link
                             to="/"
                             href="/"
                             className={activeLink === 'banner' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('banner')}>
                             Home
-                        </NavLink>
-                        <NavLink
+                        </Nav.Link>
+                        <Nav.Link
                             to="/about"
                             href="/about"
                             className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('about')}>
                             About
-                        </NavLink>
-                        <NavLink
+                        </Nav.Link>
+                        <Nav.Link
                             to="/projects"
                             href="/projects"
                             className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('projects')}>
                             Projects
-                        </NavLink>
-                        <NavLink
+                        </Nav.Link>
+                        <Nav.Item>
+                            <Nav.Link as={Link} to="/contact" className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'} onClick={() => setActiveLink('contact')}>
+                                 contact
+                            </Nav.Link>
+                        </Nav.Item>
+                        {/* <Nav.Link
                             to="/contact"
                             href="/contact"
                             className={activeLink === 'contact' ? 'active navbar-link' : 'navbar-link'}
                             onClick={() => setActiveLink('contact')}> 
                             Contact
-                        </NavLink>
+                        </Nav.Link> */}
                     </Nav>
                     {/* <span className="navbar-text">
                         <div className="social-icon">
